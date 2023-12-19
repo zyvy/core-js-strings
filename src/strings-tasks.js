@@ -518,6 +518,7 @@ function extractEmails(str) {
  */
 function encodeToRot13(str) {
   const myArr = str.split('');
+  // console.log(myArr)
   const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split(
     ''
   );
@@ -525,12 +526,15 @@ function encodeToRot13(str) {
     ''
   );
   for (let i = 0; i < myArr.length; i += 1) {
-    myArr[i] = output[input.indexOf(myArr[i])];
+    //  console.log(input.indexOf(myArr[i]))
+    if (input.indexOf(myArr[i]) >= 0) {
+      myArr[i] = output[input.indexOf(myArr[i])];
+    }
   }
   return myArr.join('');
 }
 
-// console.log(encodeToRot13('hello'))
+console.log(encodeToRot13('Why did the chicken cross the road?'));
 
 /**
  * Returns playid card id.
