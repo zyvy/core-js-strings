@@ -351,11 +351,27 @@ function isPalindrome(str) {
   if (str.length === 1) {
     return true;
   }
-  const half1 = str.slice(0, str.length / 2).toLowerCase();
-  const half2 = str.slice(str.length / 2).toLowerCase();
+  const myArr = str
+    .replaceAll(' ', '')
+    .replaceAll(',', '')
+    .replaceAll('!', '')
+    .replaceAll('.', '')
+    .replaceAll(':', '')
+    .replaceAll('?', '')
+    .toLowerCase()
+    .split('');
+  // console.log(myArr)
+  for (let i = 0; i < myArr.length / 2; i += 1) {
+    if (myArr[i] !== myArr[myArr.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+
   // console.log(half1, half2, half2.includes(reverseString(half1)));
-  return half2.includes(reverseString(half1));
+  // return half2.includes(reverseString(half1));
 }
+// console.log(isPalindrome('openai'))
 
 /**
  * Find the longest word in the sentence. If there are multiple longest words,
