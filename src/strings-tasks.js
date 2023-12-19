@@ -534,7 +534,7 @@ function encodeToRot13(str) {
   return myArr.join('');
 }
 
-console.log(encodeToRot13('Why did the chicken cross the road?'));
+// console.log(encodeToRot13('Why did the chicken cross the road?'));
 
 /**
  * Returns playid card id.
