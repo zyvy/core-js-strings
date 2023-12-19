@@ -369,10 +369,19 @@ function isPalindrome(str) {
  *   findLongestWord('A long and winding road') => 'winding'
  *   findLongestWord('No words here') => 'words'
  */
-function findLongestWord(/* sentence */) {
-  throw new Error('Not implemented');
+function findLongestWord(sentence) {
+  const newArr = sentence.split(' ');
+  let max = 0;
+  let maxWord = '';
+  for (let i = 0; i < newArr.length; i += 1) {
+    if (newArr[i].length > max) {
+      max = newArr[i].length;
+      maxWord = newArr[i];
+    }
+  }
+  return maxWord;
 }
-
+// console.log(findLongestWord('The quick brown fox'));
 /**
  * Returns the string where each word is reversed.
  *
@@ -383,10 +392,10 @@ function findLongestWord(/* sentence */) {
  *   reverseWords('Hello World') => 'olleH dlroW'
  *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
  */
-function reverseWords(/* str */) {
-  throw new Error('Not implemented');
+function reverseWords(str) {
+  return str.split('').reverse().join('').split(' ').reverse().join(' ');
 }
-
+// console.log(reverseWords('The Quick Brown Fox'));
 /**
  * Inverts the case of each character in the given string.
  *
@@ -398,10 +407,18 @@ function reverseWords(/* str */) {
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(/* str */) {
-  throw new Error('Not implemented');
+function invertCase(str) {
+  const newArr = str.split('');
+  for (let i = 0; i < newArr.length; i += 1) {
+    if (newArr[i] === newArr[i].toUpperCase()) {
+      newArr[i] = newArr[i].toLowerCase();
+    } else {
+      newArr[i] = newArr[i].toUpperCase();
+    }
+  }
+  return newArr.join('');
 }
-
+// console.log(invertCase('Hello, World!'));
 /**
  * Returns the result of string template and given parameters firstName and lastName.
  * Please do not use concatenation, use template string :
@@ -415,8 +432,8 @@ function invertCase(/* str */) {
  *   getStringFromTemplate('John','Doe') => 'Hello, John Doe!'
  *   getStringFromTemplate('Chuck','Norris') => 'Hello, Chuck Norris!'
  */
-function getStringFromTemplate(/* firstName, lastName */) {
-  throw new Error('Not implemented');
+function getStringFromTemplate(firstName, lastName) {
+  return `Hello, ${firstName} ${lastName}!`;
 }
 
 /**
@@ -483,9 +500,17 @@ function extractEmails(str) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(str) {
+  const myArr = str.split('');
+  const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+  const output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'.split('');
+  for (let i = 0; i < myArr.length; i += 1) {
+    myArr[i] = output[input.indexOf(myArr[i])];
+  }
+  return myArr.join('');
 }
+
+//console.log(encodeToRot13('hello'))
 
 /**
  * Returns playid card id.
@@ -511,9 +536,18 @@ function encodeToRot13(/* str */) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(/* value */) {
-  throw new Error('Not implemented');
+function getCardId(value) {
+  const initial = ['A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
+    'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
+    'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
+    'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠']
+  for (let i = 0; i < initial.length; i += 1) {
+    if (value == initial[i]) {
+      return i;
+    }
+  }
 }
+//console.log(getCardId('Q♠'));
 
 module.exports = {
   getStringLength,
