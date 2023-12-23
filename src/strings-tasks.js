@@ -349,8 +349,8 @@ function countVowels(str) {
  *   isPalindrome('No lemon, no melon') => true
  */
 function isPalindrome(str) {
-  return str;
-  /* console.time('Execution Time');
+  // return str;
+  // console.time('Execution Time');
   if (str.length === 1) {
     return true;
   }
@@ -369,8 +369,8 @@ function isPalindrome(str) {
       return false;
     }
   }
-  console.timeEnd('Execution Time');
-  return true; */
+  // console.timeEnd('Execution Time');
+  return true;
 
   // console.log(half1, half2, half2.includes(reverseString(half1)));
   // return half2.includes(reverseString(half1));
