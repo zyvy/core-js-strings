@@ -247,19 +247,10 @@ function endsWith(str, substr) {
  *   formatTime(0, 0) => "00:00"
  */
 function formatTime(minutes, seconds) {
-  let min = '0';
-  let sec = '0';
-  if (minutes < 10) {
-    min += minutes;
-  } else {
-    min = minutes;
-  }
-  if (seconds < 10) {
-    sec += seconds;
-  } else {
-    sec = seconds;
-  }
-  return `${min}:${sec}`;
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(
+    2,
+    '0'
+  )}`;
 }
 
 /**
