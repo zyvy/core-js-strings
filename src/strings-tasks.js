@@ -193,6 +193,7 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes() => 0
  */
 function sumOfCodes(str) {
+  // console.time('Execution Time');
   if (!isString(str)) {
     return 0;
   }
@@ -200,6 +201,7 @@ function sumOfCodes(str) {
   for (let charIndex = 0; charIndex < str.length; charIndex += 1) {
     summ += str.charCodeAt(charIndex);
   }
+  // console.timeEnd('Execution Time');
   return summ;
 }
 
@@ -264,10 +266,12 @@ function formatTime(minutes, seconds) {
  *   reverseString('12345') => '54321'
  */
 function reverseString(str) {
+  // console.time('Execution Time');
   let reversed = '';
   for (let i = str.length - 1; i >= 0; i -= 1) {
     reversed = reversed.concat(str[i]);
   }
+  // console.timeEnd('Execution Time');
   return reversed;
 }
 
@@ -317,6 +321,7 @@ function containsSubstring(str, substring) {
  *   countVowels('XYZ') => 1
  */
 function countVowels(str) {
+  // console.time('Execution Time');
   const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
   let count = 0;
   for (let i = 0; i < vowels.length; i += 1) {
@@ -326,6 +331,7 @@ function countVowels(str) {
       }
     }
   }
+  // console.timeEnd('Execution Time');
   return count;
 }
 
@@ -343,6 +349,8 @@ function countVowels(str) {
  *   isPalindrome('No lemon, no melon') => true
  */
 function isPalindrome(str) {
+  return str;
+  /* console.time('Execution Time');
   if (str.length === 1) {
     return true;
   }
@@ -361,7 +369,8 @@ function isPalindrome(str) {
       return false;
     }
   }
-  return true;
+  console.timeEnd('Execution Time');
+  return true; */
 
   // console.log(half1, half2, half2.includes(reverseString(half1)));
   // return half2.includes(reverseString(half1));
@@ -381,6 +390,7 @@ function isPalindrome(str) {
  *   findLongestWord('No words here') => 'words'
  */
 function findLongestWord(sentence) {
+  // console.time('Execution Time');
   const newArr = sentence.split(' ');
   let max = 0;
   let maxWord = '';
@@ -390,6 +400,7 @@ function findLongestWord(sentence) {
       maxWord = newArr[i];
     }
   }
+  // console.timeEnd('Execution Time');
   return maxWord;
 }
 // console.log(findLongestWord('The quick brown fox'));
@@ -419,6 +430,7 @@ function reverseWords(str) {
  *   invertCase('12345') => '12345'
  */
 function invertCase(str) {
+  // console.time('Execution Time');
   const newArr = str.split('');
   for (let i = 0; i < newArr.length; i += 1) {
     if (newArr[i] === newArr[i].toUpperCase()) {
@@ -427,6 +439,7 @@ function invertCase(str) {
       newArr[i] = newArr[i].toUpperCase();
     }
   }
+  // console.timeEnd('Execution Time');
   return newArr.join('');
 }
 // console.log(invertCase('Hello, World!'));
@@ -512,6 +525,7 @@ function extractEmails(str) {
  *
  */
 function encodeToRot13(str) {
+  // console.time('Execution Time');
   const myArr = str.split('');
   // console.log(myArr)
   const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split(
@@ -526,6 +540,7 @@ function encodeToRot13(str) {
       myArr[i] = output[input.indexOf(myArr[i])];
     }
   }
+  // console.timeEnd('Execution Time');
   return myArr.join('');
 }
 
@@ -556,6 +571,7 @@ function encodeToRot13(str) {
  *   'K♠' => 51
  */
 function getCardId(value) {
+  // console.time('Execution Time');
   const initial = [
     'A♣',
     '2♣',
@@ -616,6 +632,7 @@ function getCardId(value) {
       answer = i;
     }
   }
+  //  console.timeEnd('Execution Time');
   return answer;
 }
 // console.log(getCardId('Q♠'));
