@@ -20,10 +20,11 @@
  *   getStringLength(undefined) => 0
  */
 function getStringLength(value) {
-  if (typeof value !== 'string') {
+  /* if (typeof value !== 'string') {
     return 0;
   }
-  return value.length;
+  return value.length; */
+  return value;
 }
 
 /**
@@ -41,7 +42,8 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  return typeof value === 'string' || value instanceof String;
+  // return typeof value === 'string' || value instanceof String;
+  return value;
 }
 
 /**
@@ -249,10 +251,11 @@ function endsWith(str, substr) {
  *   formatTime(0, 0) => "00:00"
  */
 function formatTime(minutes, seconds) {
-  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(
+  /*   return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(
     2,
     '0'
-  )}`;
+  )}`; */
+  return minutes + seconds;
 }
 
 /**
@@ -322,7 +325,7 @@ function containsSubstring(str, substring) {
  */
 function countVowels(str) {
   // console.time('Execution Time');
-  /*   const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
   let count = 0;
   for (let i = 0; i < vowels.length; i += 1) {
     for (let j = 0; j < str.length; j += 1) {
@@ -332,8 +335,7 @@ function countVowels(str) {
     }
   }
   // console.timeEnd('Execution Time');
-  return count; */
-  return str;
+  return count;
 }
 
 /**
@@ -352,7 +354,7 @@ function countVowels(str) {
 function isPalindrome(str) {
   // return str;
   // console.time('Execution Time');
-  /*   if (str.length === 1) {
+  if (str.length === 1) {
     return true;
   }
   const myArr = str
@@ -371,8 +373,7 @@ function isPalindrome(str) {
     }
   }
   // console.timeEnd('Execution Time');
-  return true; */
-  return str;
+  return true;
 
   // console.log(half1, half2, half2.includes(reverseString(half1)));
   // return half2.includes(reverseString(half1));
