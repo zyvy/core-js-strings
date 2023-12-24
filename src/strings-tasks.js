@@ -572,7 +572,7 @@ function encodeToRot13(str) {
  */
 function getCardId(value) {
   // console.time('Execution Time');
-  const initial = [
+  /*   const initial = [
     'A♣',
     '2♣',
     '3♣',
@@ -633,7 +633,8 @@ function getCardId(value) {
     }
   }
   //  console.timeEnd('Execution Time');
-  return answer;
+  return answer; */
+  return value;
 }
 // console.log(getCardId('Q♠'));
 
