@@ -526,8 +526,8 @@ function extractEmails(str) {
  */
 function encodeToRot13(str) {
   // console.time('Execution Time');
-  const myArr = str.split('');
-  // console.log(myArr)
+  /* const myArr = str.split(''); */
+  /*  // console.log(myArr)
   const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split(
     ''
   );
@@ -541,7 +541,8 @@ function encodeToRot13(str) {
     }
   }
   // console.timeEnd('Execution Time');
-  return myArr.join('');
+  return myArr.join(''); */
+  return str;
 }
 
 // console.log(encodeToRot13('Why did the chicken cross the road?'));
@@ -572,7 +573,7 @@ function encodeToRot13(str) {
  */
 function getCardId(value) {
   // console.time('Execution Time');
-  /*   const initial = [
+  const initial = [
     'A♣',
     '2♣',
     '3♣',
@@ -633,8 +634,7 @@ function getCardId(value) {
     }
   }
   //  console.timeEnd('Execution Time');
-  return answer; */
-  return value;
+  return answer;
 }
 // console.log(getCardId('Q♠'));
 
