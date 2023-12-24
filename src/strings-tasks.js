@@ -20,11 +20,10 @@
  *   getStringLength(undefined) => 0
  */
 function getStringLength(value) {
-  /* if (typeof value !== 'string') {
+  if (typeof value !== 'string') {
     return 0;
   }
-  return value.length; */
-  return value;
+  return value.length;
 }
 
 /**
@@ -42,8 +41,7 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  // return typeof value === 'string' || value instanceof String;
-  return value;
+  return typeof value === 'string' || value instanceof String;
 }
 
 /**
@@ -89,7 +87,8 @@ function getFirstChar(value) {
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  return value.trim();
+  // return value.trim();
+  return value;
 }
 
 /**
