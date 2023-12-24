@@ -391,7 +391,7 @@ function isPalindrome(str) {
  */
 function findLongestWord(sentence) {
   // console.time('Execution Time');
-  const newArr = sentence.split(' ');
+  /* const newArr = sentence.split(' ');
   let max = 0;
   let maxWord = '';
   for (let i = 0; i < newArr.length; i += 1) {
@@ -401,7 +401,8 @@ function findLongestWord(sentence) {
     }
   }
   // console.timeEnd('Execution Time');
-  return maxWord;
+  return maxWord; */
+  return sentence;
 }
 // console.log(findLongestWord('The quick brown fox'));
 /**
@@ -415,7 +416,8 @@ function findLongestWord(sentence) {
  *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
  */
 function reverseWords(str) {
-  return str.split('').reverse().join('').split(' ').reverse().join(' ');
+  // return str.split('').reverse().join('').split(' ').reverse().join(' ');
+  return str;
 }
 // console.log(reverseWords('The Quick Brown Fox'));
 /**
@@ -431,7 +433,7 @@ function reverseWords(str) {
  */
 function invertCase(str) {
   // console.time('Execution Time');
-  const newArr = str.split('');
+  /*  const newArr = str.split('');
   for (let i = 0; i < newArr.length; i += 1) {
     if (newArr[i] === newArr[i].toUpperCase()) {
       newArr[i] = newArr[i].toLowerCase();
@@ -440,7 +442,8 @@ function invertCase(str) {
     }
   }
   // console.timeEnd('Execution Time');
-  return newArr.join('');
+  return newArr.join(''); */
+  return str;
 }
 // console.log(invertCase('Hello, World!'));
 /**
@@ -471,8 +474,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  // return value.split(',')[1].trim().slice(0, -1);
-  return value;
+  return value.split(',')[1].trim().slice(0, -1);
 }
 
 /**
@@ -487,8 +489,7 @@ function extractNameFromTemplate(value) {
  *   unbracketTag('<a>') => 'a'
  */
 function unbracketTag(str) {
-  // return str.replace('<', '').replace('>', '');
-  return str;
+  return str.replace('<', '').replace('>', '');
 }
 
 /**
@@ -507,8 +508,7 @@ function unbracketTag(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  // return str.split(';');
-  return str;
+  return str.split(';');
 }
 
 /**
