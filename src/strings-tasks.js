@@ -471,7 +471,8 @@ function getStringFromTemplate(firstName, lastName) {
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  return value.split(',')[1].trim().slice(0, -1);
+  // return value.split(',')[1].trim().slice(0, -1);
+  return value;
 }
 
 /**
@@ -486,7 +487,8 @@ function extractNameFromTemplate(value) {
  *   unbracketTag('<a>') => 'a'
  */
 function unbracketTag(str) {
-  return str.replace('<', '').replace('>', '');
+  // return str.replace('<', '').replace('>', '');
+  return str;
 }
 
 /**
@@ -505,7 +507,8 @@ function unbracketTag(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  return str.split(';');
+  // return str.split(';');
+  return str;
 }
 
 /**
@@ -526,8 +529,8 @@ function extractEmails(str) {
  */
 function encodeToRot13(str) {
   // console.time('Execution Time');
-  /* const myArr = str.split(''); */
-  /*  // console.log(myArr)
+  const myArr = str.split('');
+  // console.log(myArr)
   const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split(
     ''
   );
@@ -541,8 +544,7 @@ function encodeToRot13(str) {
     }
   }
   // console.timeEnd('Execution Time');
-  return myArr.join(''); */
-  return str;
+  return myArr.join('');
 }
 
 // console.log(encodeToRot13('Why did the chicken cross the road?'));
