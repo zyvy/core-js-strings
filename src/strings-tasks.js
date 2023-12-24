@@ -322,7 +322,7 @@ function containsSubstring(str, substring) {
  */
 function countVowels(str) {
   // console.time('Execution Time');
-  const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+  /*   const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
   let count = 0;
   for (let i = 0; i < vowels.length; i += 1) {
     for (let j = 0; j < str.length; j += 1) {
@@ -332,7 +332,8 @@ function countVowels(str) {
     }
   }
   // console.timeEnd('Execution Time');
-  return count;
+  return count; */
+  return str;
 }
 
 /**
@@ -351,7 +352,7 @@ function countVowels(str) {
 function isPalindrome(str) {
   // return str;
   // console.time('Execution Time');
-  if (str.length === 1) {
+  /*   if (str.length === 1) {
     return true;
   }
   const myArr = str
@@ -370,7 +371,8 @@ function isPalindrome(str) {
     }
   }
   // console.timeEnd('Execution Time');
-  return true;
+  return true; */
+  return str;
 
   // console.log(half1, half2, half2.includes(reverseString(half1)));
   // return half2.includes(reverseString(half1));
@@ -391,7 +393,7 @@ function isPalindrome(str) {
  */
 function findLongestWord(sentence) {
   // console.time('Execution Time');
-  /* const newArr = sentence.split(' ');
+  const newArr = sentence.split(' ');
   let max = 0;
   let maxWord = '';
   for (let i = 0; i < newArr.length; i += 1) {
@@ -401,8 +403,7 @@ function findLongestWord(sentence) {
     }
   }
   // console.timeEnd('Execution Time');
-  return maxWord; */
-  return sentence;
+  return maxWord;
 }
 // console.log(findLongestWord('The quick brown fox'));
 /**
@@ -416,8 +417,7 @@ function findLongestWord(sentence) {
  *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
  */
 function reverseWords(str) {
-  // return str.split('').reverse().join('').split(' ').reverse().join(' ');
-  return str;
+  return str.split('').reverse().join('').split(' ').reverse().join(' ');
 }
 // console.log(reverseWords('The Quick Brown Fox'));
 /**
@@ -433,7 +433,7 @@ function reverseWords(str) {
  */
 function invertCase(str) {
   // console.time('Execution Time');
-  /*  const newArr = str.split('');
+  const newArr = str.split('');
   for (let i = 0; i < newArr.length; i += 1) {
     if (newArr[i] === newArr[i].toUpperCase()) {
       newArr[i] = newArr[i].toLowerCase();
@@ -442,8 +442,7 @@ function invertCase(str) {
     }
   }
   // console.timeEnd('Execution Time');
-  return newArr.join(''); */
-  return str;
+  return newArr.join('');
 }
 // console.log(invertCase('Hello, World!'));
 /**
