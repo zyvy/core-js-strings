@@ -87,8 +87,7 @@ function getFirstChar(value) {
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  // return value.trim();
-  return value;
+  return value.trim();
 }
 
 /**
@@ -250,11 +249,10 @@ function endsWith(str, substr) {
  *   formatTime(0, 0) => "00:00"
  */
 function formatTime(minutes, seconds) {
-  /*   return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(
     2,
     '0'
-  )}`; */
-  return minutes + seconds;
+  )}`;
 }
 
 /**
@@ -289,7 +287,8 @@ function reverseString(str) {
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
 function orderAlphabetically(str) {
-  return str.split('').toSorted().join('');
+  const answer = str.split('').sort();
+  return answer.join('');
 }
 
 /**
